@@ -3,10 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { IniciComponent } from './inici/inici.component';
+import { EventsComponent } from './events/events.component';
+import { AltaEventComponent } from './events/alta-event/alta-event.component';
+import { ModificarEventComponent } from './events/modificar-event/modificar-event.component';
+import { EliminarEventComponent } from './events/eliminar-event/eliminar-event.component';
+import { QuiSomComponent } from './qui-som/qui-som.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    IniciComponent,
+    EventsComponent,
+    AltaEventComponent,
+    ModificarEventComponent,
+    EliminarEventComponent,
+    QuiSomComponent
   ],
   imports: [
     BrowserModule,
