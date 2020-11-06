@@ -1,1 +1,35 @@
-<p>alta-event works!</p>
+<div class="container-fluid my-4">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card card-body">
+        <h3 class="text-center mb-4">Alta Event</h3>
+        <form>
+          <div class="form-group">
+            <input class="form-control" type="text" name="nick" placeholder="Nickname" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="Contraseña" name="pass" value=""
+              type="password">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" name="dni" placeholder="DNI">
+          </div>
+          <div class="form-group">
+            <input class="form-control" #vNombre placeholder="Nombre" type="text" name="nombre" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" name="apellido" placeholder="Apellidos"/>
+          </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="Edad" type="number" name="edad" max="99" min="18" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="E-mail" name="mail" type="email">
+          </div>
+          <button class="btn btn-primary btn-block" (click)="EnviarNombre(vNombre.value)" type="button"><b>Click Per Fer La Alta Event!</b></button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

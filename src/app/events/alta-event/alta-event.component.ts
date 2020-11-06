@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaEventComponent implements OnInit {
 
+nombre: string ="";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  EnviarNombre(nombre) {
+    this.nombre = nombre;
+    console.log(this.nombre);
   }
 
 }
