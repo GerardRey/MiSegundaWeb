@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GrupEvents } from './models/events.model';
+import { GrupEvents } from '../models/events.model';
+
 
 @Component({
   selector: 'app-events',
@@ -34,10 +35,6 @@ export class EventsComponent implements OnInit {
 
   arrayDeEventos(Array): void {
     this.arrayEvents = Array
-  }
-
-  console(): void {
-    console.log(this.arrayEvents);
   }
 
 }

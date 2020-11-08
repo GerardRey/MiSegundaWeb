@@ -10,6 +10,7 @@ import { EventsComponent } from './events/events.component';
 import { AltaEventComponent } from './events/alta-event/alta-event.component';
 import { ModificarEventComponent } from './events/modificar-event/modificar-event.component';
 import { QuiSomComponent } from './qui-som/qui-som.component';
+import { WorkerDetailComponent } from './worker-detail/worker-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { QuiSomComponent } from './qui-som/qui-som.component';
     AltaEventComponent,
     ModificarEventComponent,
     QuiSomComponent,
+    WorkerDetailComponent
   ],
   imports: [
     BrowserModule,

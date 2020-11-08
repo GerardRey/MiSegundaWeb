@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
-import { GrupEvents } from '../models/events.model';
+import { GrupEvents } from 'src/app/models/events.model';
 
 @Component({
   selector: 'app-modificar-event',

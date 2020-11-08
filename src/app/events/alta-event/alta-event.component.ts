@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { GrupEvents } from '../models/events.model';
+import { GrupEvents } from 'src/app/models/events.model';
 
 @Component({
   selector: 'app-alta-event',

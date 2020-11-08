@@ -1,0 +1,16 @@
+<div *ngIf="worker !== null" class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+      <div class="card" style="width: 18rem;">
+        <img [src]="worker.imageURL" class="card-img-top" alt="">
+        <div class="card-body">
+          <p class="card-text">Nom i cognom: {{worker.name}} {{worker.surname}}</p>
+          <p class="card-text">Edad: {{worker.edad}}</p>
+          <p class="card-text">Descripció: {{worker.descripcio}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
