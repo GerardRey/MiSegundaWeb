@@ -1,1 +1,20 @@
-<p>events works!</p>
+<div class="row my-3 mx-3" >
+  <div *ngFor="let eventa  of arrayEvents; let i = index" class="col">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text">{{eventa.nom}}</p>
+        <br>
+        <p class="card-text">{{eventa.lloc}}</p>
+        <br>
+        <p class="card-text">{{eventa.correu}}</p>
+        <br>
+        <p class="card-text">{{eventa.descrip}}</p>
+        <br>
+        <button class="btn btn-danger" (click)="eliminar(i)">Eliminar</button>
+        <button class="btn btn-warning ml-3" (click)="edit(eventa)" >Modificar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-alta-event *ngIf="cambiar == undefined" (pasarArray)="arrayDeEventos($event)"></app-alta-event>
+<app-modificar-event *ngIf="cambiar !== undefined" [modify]="cambiar" (complete)="eventUpdated()"></app-modificar-event>

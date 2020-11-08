@@ -12,15 +12,10 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/qui-som']" routerLinkActive="active">Qui som?</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" [routerLink]="['/events']" routerLinkActive="active" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/events']" routerLinkActive="active">
             Events
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" [routerLink]="['/events/alta-event']" routerLinkActive="active">Alta Event</a>
-            <a class="dropdown-item" [routerLink]="['/events/modificar-event']" routerLinkActive="active">Modificar Event</a>
-            <a class="dropdown-item" [routerLink]="['/events/eliminar-event']" routerLinkActive="active">Eliminar Event</a>
-          </div>
         </li>
       </ul>
     </div>

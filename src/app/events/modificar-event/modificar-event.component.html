@@ -1,1 +1,32 @@
-<p>modificar-event works!</p>
+<div class="container-fluid my-4">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card card-body">
+        <h3 class="text-center mb-4">Modificar Event</h3>
+        <form>
+          <div class="form-group">
+            <input class="form-control"  [(ngModel)]="modify.nom" #vNombre placeholder="Nombre" type="text" name="Nom del Event"/>
+            <p *ngIf="errors[0]">Tens que omplir aquet camp</p>
+          </div>
+          <div class="form-group">
+            <input class="form-control"  [(ngModel)]="modify.lloc" #vLloc type="text" name="Lloc" placeholder="Lloc del Event"/>
+            <p *ngIf="errors[1]">Tens que omplir aquet camp</p>
+          </div>
+          <div class="form-group">
+            <input class="form-control"  [(ngModel)]="modify.correu" #vCorreu placeholder="Correu de Contacte" name="mail" type="email" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control"  [(ngModel)]="modify.descrip" #vDescrip placeholder="Descripció" type="text" name="Descripcio"></textarea>
+            <p *ngIf="errors[2]">No se pot introduir menos de 2 caracters</p>
+          </div>
+          <div>
+            <input  type="checkbox" name="politica" id="politica" required>
+            <label class="ml-1">Politica de privacitat</label>
+          </div>
+          <button class="btn btn-primary btn-block" (click)="EnviarDatos()" type="button"><b>Guardar</b></button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

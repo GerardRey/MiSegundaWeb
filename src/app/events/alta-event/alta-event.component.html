@@ -5,30 +5,26 @@
         <h3 class="text-center mb-4">Alta Event</h3>
         <form>
           <div class="form-group">
-            <input class="form-control" type="text" name="nick" placeholder="Nickname" />
+            <input class="form-control" #vNombre placeholder="Nombre" type="text" name="Nom del Event"/>
+            <p *ngIf="errors[0]">Tens que omplir aquet camp</p>
           </div>
           <div class="form-group">
-            <input class="form-control" placeholder="Contraseña" name="pass" value=""
-              type="password">
+            <input class="form-control" #vLloc type="text" name="Lloc" placeholder="Lloc del Event"/>
+            <p *ngIf="errors[1]">Tens que omplir aquet camp</p>
           </div>
           <div class="form-group">
-            <input class="form-control" type="text" name="dni" placeholder="DNI">
+            <input class="form-control" #vCorreu placeholder="Correu de Contacte" name="mail" type="email" required>
           </div>
           <div class="form-group">
-            <input class="form-control" #vNombre placeholder="Nombre" type="text" name="nombre" />
+            <textarea class="form-control" #vDescrip placeholder="Descripció" type="text" name="Descripcio"></textarea>
+            <p *ngIf="errors[2]">No se pot introduir menos de 2 caracters</p>
           </div>
-          <div class="form-group">
-            <input class="form-control" type="text" name="apellido" placeholder="Apellidos"/>
+          <div>
+            <input  type="checkbox" name="politica" id="politica" required>
+            <label class="ml-1">Politica de privacitat</label>
           </div>
-          <div class="form-group">
-            <input class="form-control" placeholder="Edad" type="number" name="edad" max="99" min="18" />
-          </div>
-          <div class="form-group">
-            <input class="form-control" placeholder="E-mail" name="mail" type="email">
-          </div>
-          <button class="btn btn-primary btn-block" (click)="EnviarNombre(vNombre.value)" type="button"><b>Click Per Fer La Alta Event!</b></button>
+          <button class="btn btn-primary btn-block" (click)="EnviarDatos(vNombre.value, vLloc.value, vCorreu.value, vDescrip.value)" type="button"><b>Click Per Fer La Alta Event!</b></button>
         </form>
-
       </div>
     </div>
   </div>
