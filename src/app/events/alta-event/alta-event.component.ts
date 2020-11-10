@@ -27,7 +27,8 @@ error : number = 0;
 
   }
 
-  EnviarDatos(nombre,lloc,correu,descrip): void {
+  EnviarDatos(nombre,lloc,correu,descrip,checked): void {
+    console.log(checked)
     this.error = 0;
     if (nombre === "") {
       this.errors[0] = true
@@ -59,6 +60,14 @@ error : number = 0;
     }
     else {
       this.errors[3] = false;
+    }
+
+    if(!checked) {
+      this.errors[4] = true
+      this.error++;
+    }
+    else {
+      this.errors[4] = false;
     }
 
     if(this.error === 0) {

@@ -21,10 +21,11 @@
             <p *ngIf="errors[2]">No se pot introduir menos de 2 caracters</p>
           </div>
           <div>
-            <input type="checkbox" name="politica" id="politica" required>
+            <input type="checkbox" #vCheckbox name="politica" id="politica" required>
             <label class="ml-1">Politica de privacitat</label>
+            <p *ngIf="errors[4]">Campo requerido</p>
           </div>
-          <button class="btn btn-primary btn-block" (click)="EnviarDatos(vNombre.value, vLloc.value, vCorreu.value, vDescrip.value)" type="button"><b>Click Per Fer La Alta Event!</b></button>
+          <button class="btn btn-primary btn-block" (click)="EnviarDatos(vNombre.value, vLloc.value, vCorreu.value, vDescrip.value, vCheckbox.checked)" type="button"><b>Click Per Fer La Alta Event!</b></button>
         </form>
       </div>
     </div>
