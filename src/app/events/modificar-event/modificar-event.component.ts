@@ -12,6 +12,7 @@ export class ModificarEventComponent implements OnInit {
   @Output() complete = new EventEmitter<GrupEvents>();
   errors: boolean[] = [false, false, false, false];
   error : number = 0;
+  mailPatt= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class ModificarEventComponent implements OnInit {
   EnviarDatos(): void {
     this.error = 0;
     if (this.modify.nom === "") {
-      this.errors[0] = true
+      this.errors[0] = true;
       this.error++;
     }
     else {
@@ -28,7 +29,7 @@ export class ModificarEventComponent implements OnInit {
     }
 
     if (this.modify.lloc === "") {
-      this.errors[1] = true
+      this.errors[1] = true;
       this.error++;
     }
     else {
@@ -36,15 +37,23 @@ export class ModificarEventComponent implements OnInit {
     }
 
     if (this.modify.descrip.length < 2) {
-      this.errors[2] = true
+      this.errors[2] = true;
       this.error++;
     }
     else {
       this.errors[2] = false;
     }
 
+    if(!this.modify.correu.match(this.mailPatt)) {
+      this.errors[3] = true;
+      this.error++;
+    }
+    else {
+      this.errors[3] = false;
+    }
+
     if(this.error === 0) {
-      this.GuardarDatos()
+      this.GuardarDatos();
     }
 
   }

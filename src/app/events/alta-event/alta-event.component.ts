@@ -15,9 +15,7 @@ descrip: string="";
 
 mailPatt= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-arrayEvents: GrupEvents[] = [];
-
-@Output() pasarArray = new EventEmitter<Array<GrupEvents>>();
+@Output() pasarArray = new EventEmitter<GrupEvents>();
 
 errors: boolean[] = [false, false, false, false];
 error : number = 0;
@@ -74,16 +72,11 @@ error : number = 0;
     this.lloc = lloc;
     this.correu = correu;
     this.descrip = descrip;
-    this.GuardarModelEvent();
-  }
-
-  GuardarModelEvent(): void {
-    this.arrayEvents.push(new GrupEvents(this.nombre, this.lloc, this.correu, this.descrip));
     this.EnviarAlPadre();
   }
 
   EnviarAlPadre(): void {
-    this.pasarArray.emit(this.arrayEvents);
+    this.pasarArray.emit(new GrupEvents(this.nombre, this.lloc, this.correu, this.descrip));
 
   }
 

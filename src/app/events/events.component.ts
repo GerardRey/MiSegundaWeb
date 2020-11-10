@@ -9,7 +9,7 @@ import { GrupEvents } from '../models/events.model';
 })
 export class EventsComponent implements OnInit {
 
-  @Input() arrayEvents: GrupEvents[];
+  arrayEvents: GrupEvents[] = [];
 
   cambiar: GrupEvents;
 
@@ -17,7 +17,6 @@ export class EventsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
   }
 
   eventUpdated(){
@@ -34,7 +33,7 @@ export class EventsComponent implements OnInit {
 
 
   arrayDeEventos(Array): void {
-    this.arrayEvents = Array
+    this.arrayEvents.push(Array);
   }
 
 }
