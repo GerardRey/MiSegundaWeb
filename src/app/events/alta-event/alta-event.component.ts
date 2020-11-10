@@ -13,6 +13,8 @@ lloc: string ="";
 correu: string="";
 descrip: string="";
 
+mailPatt= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 arrayEvents: GrupEvents[] = [];
 
 @Output() pasarArray = new EventEmitter<Array<GrupEvents>>();
@@ -51,6 +53,14 @@ error : number = 0;
     }
     else {
       this.errors[2] = false;
+    }
+
+    if(!correu.match(this.mailPatt)) {
+      this.errors[3] = true
+      this.error++;
+    }
+    else {
+      this.errors[3] = false;
     }
 
     if(this.error === 0) {

@@ -13,7 +13,8 @@
             <p *ngIf="errors[1]">Tens que omplir aquet camp</p>
           </div>
           <div class="form-group">
-            <input class="form-control" #vCorreu placeholder="Correu de Contacte" name="mail" type="email" required>
+            <input class="form-control" #vCorreu placeholder="Correu de Contacte" name="mail" type="email">
+            <p *ngIf="errors[3]">No se a ficat @ y el .com por ejemplo .com</p>
           </div>
           <div class="form-group">
             <textarea class="form-control" #vDescrip placeholder="Descripció" type="text" name="Descripcio"></textarea>
