@@ -19,10 +19,6 @@
             <textarea class="form-control"  [(ngModel)]="modify.descrip" #vDescrip placeholder="Descripció" type="text" name="Descripcio"></textarea>
             <p *ngIf="errors[2]">No se pot introduir menos de 2 caracters</p>
           </div>
-          <div>
-            <input  type="checkbox" name="politica" id="politica" required>
-            <label class="ml-1">Politica de privacitat</label>
-          </div>
           <button class="btn btn-primary btn-block" (click)="EnviarDatos()" type="button"><b>Guardar</b></button>
         </form>
 

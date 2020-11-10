@@ -18,6 +18,7 @@ export class QuiSomComponent implements OnInit {
     this.workers.push(new CompanyWorker('Juan', 'assets/Juan.jpeg', 'Magan',10,'Bom dia 8)'));
     this.workers.push(new CompanyWorker('Jorge', 'assets/Jorge.png', 'Infantes',19,'Sóc Fragati :)'));
     this.workers.push(new CompanyWorker('Pedro', 'assets/Sanchez.jpg', 'Sanchez', 4, 'A casa que ya es hora'));
+    this.workers.push(new CompanyWorker('Alfonso', 'assets/Fonsi.png', 'Garcia', 18, 'Alias: Fonsi, buscado por ser tant bueno al tft 8)'));
   }
 
   selectWorker(worker: CompanyWorker): void {
